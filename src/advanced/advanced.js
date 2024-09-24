@@ -73,7 +73,7 @@ const requestPOST = {
 
 /**
  * 
- * @param {req} String 
+ * @param {String} req
  * @returns {object} 
  */
 function parseRequest(req) {
@@ -84,6 +84,9 @@ function parseRequest(req) {
     body: null,
     query: null
   }
+
+
+  
   let data = req.split('/')
   let req_method = data[0].replaceAll(' ', '')
 
