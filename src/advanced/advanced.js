@@ -70,6 +70,12 @@ const requestPOST = {
 // - headers: an object with the headers in the request
 // - body: the body in the request
 // - query: an object with the query parameters in the request
+
+/**
+ * 
+ * @param {req} String 
+ * @returns {object} 
+ */
 function parseRequest(req) {
   const request = {
     method: '',
@@ -78,6 +84,21 @@ function parseRequest(req) {
     body: null,
     query: null
   }
+  let data = req.split('/')
+  let req_method = data[0].replaceAll(' ', '')
+
+  data = data[1].split('Host')
+  let path = data[0].replaceAll(' ', '')
+
+  data = data[1].split('www.') // filter out host
+
+  data = data[1].split('Content-Type')
+  
+
+  
+
+
+  
 
   // call the other functions below as needed
 
